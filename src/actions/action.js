@@ -5,24 +5,24 @@ export function action (type, payload, meta = {}) {
     error = payload
     payload = null
     meta = Object.create(meta || null)
-    meta.state = actionStates.error
+    meta.state = states.error
   }
 
   return { type, error, payload, meta }
 }
 
-export function startingAction (type, payload) {
-  return action(type, payload, { state: actionStates.starting })
+export function starting (type, payload) {
+  return action(type, payload, { state: states.starting })
 }
 
-export function finishedAction (type, payload) {
-  return action(type, payload, { state: actionStates.finished })
+export function finished (type, payload) {
+  return action(type, payload, { state: states.finished })
 }
 
-export const actionStates = {
+export const states = Object.freeze({
   __proto__: null,
 
   starting: 'starting',
   finished: 'finished',
   error: 'error'
-}
+})

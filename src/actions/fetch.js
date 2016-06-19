@@ -9,7 +9,7 @@ export function fetch (url, options = {}, coerceTo = coerceOptions.text) {
   return action(FETCH, { url, options, coerceTo })
 }
 
-export function fetchText (url, options = {}) {
+export function text (url, options = {}) {
   return fetch(url, options);
 }
 

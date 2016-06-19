@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { fetch, fetchText } from '../../src/actions/fetch'
+import { fetch, text } from '../../src/actions/fetch'
 
 describe('actions for fetching content,', () => {
   it('creates fetch actions', () => {
@@ -25,7 +25,7 @@ describe('actions for fetching content,', () => {
     const url = 'http://nonexistent'
     const options = {}
 
-    expect(fetchText(url, options)).to.deep.equal({
+    expect(text(url, options)).to.deep.equal({
       type: 'FETCH',
       meta: {},
       error: null,

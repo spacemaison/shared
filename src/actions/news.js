@@ -1,8 +1,7 @@
 import 'babel-polyfill'
 import cheerio from 'cheerio'
 import { NEWS_REFRESH } from './actions'
-import { action, startingAction, finishedAction } from './action'
-import { fetchText } from './fetch'
+import { actions, fetch } from './index'
 import { NewsItem } from '../models/NewsItem'
 
 /**
@@ -11,13 +10,13 @@ import { NewsItem } from '../models/NewsItem'
  */
 export function * refresh (feedURL = refresh.url) {
   try {
-    yield startingAction(NEWS_REFRESH)
+    yield actions.starting(NEWS_REFRESH)
 
-    const rssText = yield fetchText(feedURL)
+    const rssText = yield fetch.text(feedURL)
     const $rss = cheerio.load(rssText, { xmlMode: true, withDomLvl1: true })
     const $entries = $rss('entry')
 
-    return yield finishedAction(NEWS_REFRESH, $entries.toArray().map(entry => {
+    return yield actions.finished(NEWS_REFRESH, $entries.toArray().map(entry => {
       const $entry = cheerio(entry)
       const $content = cheerio.load($entry.find('content').text())
       const $thumbnail = $content('img')
@@ -33,7 +32,7 @@ export function * refresh (feedURL = refresh.url) {
           url, description, thumbnailSource, thumbnailDescription)
     }))
   } catch (error) {
-    return yield action(NEWS_REFRESH, error)
+    return yield actions.action(NEWS_REFRESH, error)
   }
 }
 

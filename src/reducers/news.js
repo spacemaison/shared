@@ -1,5 +1,5 @@
 import { NEWS_REFRESH } from '../actions/actions'
-import { actionStates } from '../actions/action'
+import { states } from '../actions/action'
 import { News } from '../models/News'
 
 export function news (news = new News(), action) {
@@ -11,8 +11,8 @@ export function news (news = new News(), action) {
 
 export function refresh (news = new News(), { payload, meta: { state } }) {
   switch (state) {
-    case actionStates.error: return news
-    case actionStates.starting: return new News(true, news.items)
-    case actionStates.finished: return new News(false, payload)
+    case states.error: return news
+    case states.starting: return new News(true, news.items)
+    case states.finished: return new News(false, payload)
   }
 }
