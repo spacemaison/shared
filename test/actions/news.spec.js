@@ -37,6 +37,13 @@ describe('actions for news', () => {
     })
 
     expect(action.next(MOCK_NEWS_RSS_FEED).value).to.deep.equal({
+      type: 'TIMEOUT',
+      meta: {},
+      error: null,
+      payload: { timeout: 10 }
+    })
+
+    expect(action.next().value).to.deep.equal({
       type: 'NEWS_REFRESH',
       error: null,
       meta: { state: 'finished' },

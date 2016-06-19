@@ -1,7 +1,7 @@
 import 'babel-polyfill'
 import cheerio from 'cheerio'
 import { NEWS_REFRESH } from './actions'
-import { actions, fetch } from './index'
+import { actions, fetch, timeouts } from './index'
 import { NewsItem } from '../models/NewsItem'
 
 /**
@@ -15,6 +15,8 @@ export function * refresh (feedURL = refresh.url) {
     const rssText = yield fetch.text(feedURL)
     const $rss = cheerio.load(rssText, { xmlMode: true, withDomLvl1: true })
     const $entries = $rss('entry')
+
+    yield timeouts.timeout(10)
 
     return yield actions.finished(NEWS_REFRESH, $entries.toArray().map(entry => {
       const $entry = cheerio(entry)
