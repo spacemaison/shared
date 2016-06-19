@@ -11,6 +11,12 @@ describe('actions for news', () => {
       thumbnailSource: 'https://b.thumbs.redditmedia.com/MauDRRfm7MaHZLXnV3tPlhLBdjwnpoUHO4zUDfspJdM.jpg',
       thumbnailDescription: 'Bright disruption spotted on Saturn\'s F-ring'
     }
+    const expectedLongNewsItem = Object.assign({}, expectedNewsItem, {
+      description:
+          'Bright disruption spotted on Saturn\'s F-ring lkjlkjlkj lkjlkjlkj ' +
+          'lkjlkjlkj lkjlkjlkj lkjlkjfdslkjfkldsjflkjdslkfjdslkjfdslkjflkdsjf' +
+          'kldsjf lkjlkjlkjlkj'
+    })
 
     expect(action.next().value).to.deep.equal({
       type: 'NEWS_REFRESH',
@@ -34,7 +40,7 @@ describe('actions for news', () => {
       type: 'NEWS_REFRESH',
       error: null,
       meta: { state: 'finished' },
-      payload: [ expectedNewsItem, expectedNewsItem, expectedNewsItem ]
+      payload: [ expectedNewsItem, expectedLongNewsItem, expectedNewsItem ]
     })
   })
 })

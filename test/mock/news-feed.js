@@ -34,7 +34,7 @@ export const MOCK_NEWS_RSS_FEED = `
       <id>t3_4nw1qc</id>
       <link href="https://www.reddit.com/r/space/comments/4nw1qc/bright_disruption_spotted_on_saturns_fring/" />
       <updated>2016-06-13T15:09:06+00:00</updated>
-      <title>Bright disruption spotted on Saturn's F-ring</title>
+      <title>Bright disruption spotted on Saturn's F-ring lkjlkjlkj lkjlkjlkj lkjlkjlkj lkjlkjlkj lkjlkjfdslkjfkldsjflkjdslkfjdslkjfdslkjflkdsjfkldsjf lkjlkjlkjlkj</title>
     </entry>
 
     <entry>
