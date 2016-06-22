@@ -1,5 +1,5 @@
 {
-  "name": "space-watch-frontend-shared",
+  "name": "space-watch-shared",
   "version": "0.0.1",
   "description": "Aggregated space information",
   "main": "src/index.js",
