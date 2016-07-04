@@ -1,0 +1,1 @@
+'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _news=require('./news');Object.defineProperty(exports,'news',{enumerable:true,get:function get(){return _news.news;}});

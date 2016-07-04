@@ -2,9 +2,10 @@
   "name": "space-watch-shared",
   "version": "0.0.1",
   "description": "Aggregated space information",
-  "main": "src/index.js",
+  "browser": "src/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
-    "test": "node_modules/mocha/bin/mocha --timeout 10000 --compilers js:babel-register --recursive test"
+    "test": "node_modules/mocha/bin/mocha --require test/setup.js --compilers js:babel-register --recursive test"
   },
   "author": "Jesse Tuchsen",
   "license": "GPL-3.0",
@@ -19,12 +20,20 @@
     "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-react": "^6.5.0",
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "json-loader": "^0.5.4",
     "mocha": "^2.5.3",
     "mocha-babel": "^3.0.3"
   },
   "babel": {
-    "presets": [ "babel-preset-react-native" ]
+    "presets": [
+      "babel-preset-react-native"
+    ]
   }
 }
