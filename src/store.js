@@ -1,6 +1,6 @@
 import { applyMiddleware, combineReducers } from 'redux'
 import { createStore as _createStore } from 'redux'
-import reduxGen from 'redux-gen'
+import generatorMiddleware from 'redux-gen'
 import interceptFetch from './middleware/fetch'
 import timeoutMiddleware from './middleware/timeout'
 import debugInterceptFetch from './middleware/fetch-debug'
@@ -10,16 +10,15 @@ export function createStore (
       addedReducers = {},
       addedMiddleware = [],
       options = {}) {
-  let fetchMiddleware = interceptFetch
-
-  if (options.debug === true) {
-    fetchMiddleware = debugInterceptFetch
-  }
+  const { globalErrorHandler, globalSuccessHandler } = options
+  const fetchMiddleware = options.debug === true
+      ? debugInterceptFetch
+      : interceptFetch
 
   return _createStore(
       combineReducers(Object.assign({}, addedReducers, sharedReducers)),
       applyMiddleware(
-          reduxGen(),
+          generatorMiddleware(globalErrorHandler, globalSuccessHandler),
           fetchMiddleware,
           timeoutMiddleware,
           ...addedMiddleware))
