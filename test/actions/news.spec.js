@@ -32,7 +32,7 @@ describe('actions for news', () => {
       payload: {
         url: refresh.url,
         coerceTo: 'text',
-        options: {}
+        params: {}
       }
     })
 

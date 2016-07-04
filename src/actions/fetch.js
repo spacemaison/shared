@@ -1,16 +1,39 @@
 import { action } from './action'
 import { FETCH } from './actions'
 
-export function fetch (url, options = {}, coerceTo = coerceOptions.text) {
+export function fetch (url, params = {}, coerceTo = coerceOptions.text) {
   if (!coerceOptions[coerceTo]) {
-    coerceTo = coerceOptions.text
+    coerceTo = null
   }
 
-  return action(FETCH, { url, options, coerceTo })
+  return action(FETCH, { url, params, coerceTo })
 }
 
-export function text (url, options = {}) {
-  return fetch(url, options);
+export function text (url, params = {}) {
+  return fetch(url, params);
+}
+
+export function json (url, params = {}) {
+  return fetch(url, params, coerceOptions.json);
+}
+
+export function post (url, body) {
+  return fetch(url, { method: 'POST', body }, null)
+}
+
+export function postJSON (url, body) {
+  if (typeof body !== 'string') {
+    body = JSON.stringify(body)
+  }
+
+  return fetch(url, {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body
+  }, null)
 }
 
 const coerceOptions = {
