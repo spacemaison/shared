@@ -1,10 +1,11 @@
 import { expect } from 'chai'
+import { TIMEOUT } from '../../src/actions/actions'
 import timeout from '../../src/middleware/timeout'
 
 describe('timeout middleware', () => {
   it('intercepts timeout actions', () => {
     const next = () => next.called = true
-    const action = { type: 'TIMEOUT', payload: { timeout: 0 } }
+    const action = { type: TIMEOUT, payload: { timeout: 0 } }
     const promise = timeout()(next)(action)
 
     expect(promise).to.be.instanceof(Promise)

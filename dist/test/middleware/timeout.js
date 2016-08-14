@@ -1,10 +1,11 @@
 'use strict';var _chai=require('chai');
+var _actions=require('../../src/actions/actions');
 var _timeout=require('../../src/middleware/timeout');var _timeout2=_interopRequireDefault(_timeout);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}
 
 describe('timeout middleware',function(){
 it('intercepts timeout actions',function(){
 var next=function next(){return next.called=true;};
-var action={type:'TIMEOUT',payload:{timeout:0}};
+var action={type:_actions.TIMEOUT,payload:{timeout:0}};
 var promise=(0,_timeout2.default)()(next)(action);
 
 (0,_chai.expect)(promise).to.be.instanceof(Promise);

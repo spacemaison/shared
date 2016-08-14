@@ -1,1 +1,1 @@
-'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _news=require('./news');Object.defineProperty(exports,'news',{enumerable:true,get:function get(){return _news.news;}});
+'use strict';Object.defineProperty(exports,"__esModule",{value:true});var _stories=require('./stories');Object.defineProperty(exports,'news',{enumerable:true,get:function get(){return _stories.news;}});Object.defineProperty(exports,'launches',{enumerable:true,get:function get(){return _stories.launches;}});

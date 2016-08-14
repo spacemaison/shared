@@ -1,9 +1,14 @@
+import { Url } from 'url'
 import { action } from './action'
 import { FETCH } from './actions'
 
 export function fetch (url, params = {}, coerceTo = coerceOptions.text) {
   if (!coerceOptions[coerceTo]) {
     coerceTo = null
+  }
+
+  if (url instanceof Url) {
+    url = url.format()
   }
 
   return action(FETCH, { url, params, coerceTo })

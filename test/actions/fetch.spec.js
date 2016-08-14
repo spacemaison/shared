@@ -1,20 +1,23 @@
 import { expect } from 'chai'
 import { fetch, text, json, post, postJSON } from '../../src/actions/fetch'
+import { namespace } from '../../src/constants'
 
 describe('actions for fetching content,', () => {
+  const type = namespace.resolve('fetch')
+
   it('creates fetch actions', () => {
     const url = 'http://nonexistent'
     const params = {}
 
     expect(fetch(url, params, 'invalid')).to.deep.equal({
-      type: 'FETCH',
+      type,
       meta: {},
       error: null,
       payload: { url, params, coerceTo: null }
     })
 
     expect(fetch(url, params, 'blob')).to.deep.equal({
-      type: 'FETCH',
+      type,
       meta: {},
       error: null,
       payload: { url, params, coerceTo: 'blob' }
@@ -26,7 +29,7 @@ describe('actions for fetching content,', () => {
     const params = {}
 
     expect(text(url, params)).to.deep.equal({
-      type: 'FETCH',
+      type,
       meta: {},
       error: null,
       payload: { url, params, coerceTo: 'text' }
@@ -38,7 +41,7 @@ describe('actions for fetching content,', () => {
     const params = {}
 
     expect(json(url, params)).to.deep.equal({
-      type: 'FETCH',
+      type,
       meta: {},
       error: null,
       payload: { url, params, coerceTo: 'json' }
@@ -50,7 +53,7 @@ describe('actions for fetching content,', () => {
     const body = ''
 
     expect(post(url, body)).to.deep.equal({
-      type: 'FETCH',
+      type,
       meta: {},
       error: null,
       payload: { url, params: { method: 'POST', body }, coerceTo: null }
@@ -62,7 +65,7 @@ describe('actions for fetching content,', () => {
     const body = { foo: 'bar' }
 
     expect(postJSON(url, body)).to.deep.equal({
-      type: 'FETCH',
+      type,
       meta: {},
       error: null,
       payload: {
