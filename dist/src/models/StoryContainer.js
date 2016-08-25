@@ -4,5 +4,9 @@ this.isRefreshing=isRefreshing;
 this.items=items;}_createClass(StoryContainer,[{key:typeof Symbol==="function"?
 
 
-Symbol.iterator:"@@iterator",value:function value(){
-return this.items[typeof Symbol==="function"?Symbol.iterator:"@@iterator"].bind(this.items);}}]);return StoryContainer;}();
+Symbol.iterator:"@@iterator",value:function value(){var
+items=this.items;
+
+return(
+items&&items[typeof Symbol==="function"?Symbol.iterator:"@@iterator"]&&items[typeof Symbol==="function"?Symbol.iterator:"@@iterator"]()||
+Array.prototype[typeof Symbol==="function"?Symbol.iterator:"@@iterator"]());}}]);return StoryContainer;}();

@@ -5,6 +5,11 @@ export class StoryContainer {
   }
 
   [Symbol.iterator] () {
-    return this.items[Symbol.iterator].bind(this.items)
+    const { items } = this
+
+    return (
+      items && items[Symbol.iterator] && items[Symbol.iterator]() ||
+      Array.prototype[Symbol.iterator]()
+    )
   }
 }
