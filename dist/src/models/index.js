@@ -2,4 +2,5 @@
 Object.keys(_NewsStory).forEach(function(key){if(key==="default")return;Object.defineProperty(exports,key,{enumerable:true,get:function get(){return _NewsStory[key];}});});var _StoryContainer=require('./StoryContainer');
 Object.keys(_StoryContainer).forEach(function(key){if(key==="default")return;Object.defineProperty(exports,key,{enumerable:true,get:function get(){return _StoryContainer[key];}});});var _Stories=require('./Stories');
 Object.keys(_Stories).forEach(function(key){if(key==="default")return;Object.defineProperty(exports,key,{enumerable:true,get:function get(){return _Stories[key];}});});var _LaunchStory=require('./LaunchStory');
-Object.keys(_LaunchStory).forEach(function(key){if(key==="default")return;Object.defineProperty(exports,key,{enumerable:true,get:function get(){return _LaunchStory[key];}});});
+Object.keys(_LaunchStory).forEach(function(key){if(key==="default")return;Object.defineProperty(exports,key,{enumerable:true,get:function get(){return _LaunchStory[key];}});});var _FeaturedStory=require('./FeaturedStory');
+Object.keys(_FeaturedStory).forEach(function(key){if(key==="default")return;Object.defineProperty(exports,key,{enumerable:true,get:function get(){return _FeaturedStory[key];}});});
