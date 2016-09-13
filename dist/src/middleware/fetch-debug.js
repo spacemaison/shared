@@ -13,6 +13,7 @@ next(action);};};}
 
 
 
-var mocks=(_mocks={},_defineProperty(_mocks,_constants.LAUNCH_URL,
+var mocks=(_mocks={},_defineProperty(_mocks,_constants.FEATURED_URL,
+_mocks3.default.featured.map(function(mock){return new _index.FeaturedStory(mock);})),_defineProperty(_mocks,_constants.LAUNCH_URL,
 _mocks3.default.launches.map(function(mock){return new _index.LaunchStory(mock);})),_defineProperty(_mocks,_constants.NEWS_URL,
 _mocks3.default.news.map(function(mock){return new _index.NewsStory(mock);})),_mocks);

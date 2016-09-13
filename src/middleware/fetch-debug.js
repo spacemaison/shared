@@ -1,7 +1,7 @@
 import mockJSON from './mocks.json'
 import { FETCH } from '../actions/actions'
-import { NEWS_URL, LAUNCH_URL } from '../constants'
-import { NewsStory, LaunchStory } from '../models/index'
+import { FEATURED_URL, NEWS_URL, LAUNCH_URL } from '../constants'
+import { FeaturedStory, NewsStory, LaunchStory } from '../models/index'
 
 export default function interceptFetch ({ dispatch, getState }) {
   return next => action => {
@@ -14,6 +14,7 @@ export default function interceptFetch ({ dispatch, getState }) {
 }
 
 const mocks = {
+  [FEATURED_URL]: mockJSON.featured.map(mock => new FeaturedStory(mock)),
   [LAUNCH_URL]: mockJSON.launches.map(mock => new LaunchStory(mock)),
   [NEWS_URL]: mockJSON.news.map(mock => new NewsStory(mock))
 }
