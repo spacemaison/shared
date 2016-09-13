@@ -1,7 +1,11 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 
-gulp.task('default', [ 'compile source', 'compile test' ])
+gulp.task('default', [ 'compile json', 'compile source', 'compile test' ])
+
+gulp.task('compile json', () =>
+  gulp.src('src/**/*.json').pipe(gulp.dest('dist/src'))
+)
 
 gulp.task('compile source', () =>
   gulp.src('src/**/*.js')
