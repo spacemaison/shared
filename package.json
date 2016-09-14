@@ -29,7 +29,8 @@
     "gulp-babel": "^6.1.2",
     "json-loader": "^0.5.4",
     "mocha": "^2.5.3",
-    "mocha-babel": "^3.0.3"
+    "mocha-babel": "^3.0.3",
+    "standard": "^8.0.0"
   },
   "babel": {
     "presets": [
