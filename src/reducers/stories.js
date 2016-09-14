@@ -1,6 +1,13 @@
 import { StoryContainer } from '../models/StoryContainer'
-import { LAUNCH_REFRESH, NEWS_REFRESH } from '../actions/actions'
 import { states } from '../actions/action'
+import {
+    FEATURED_REFRESH,
+    LAUNCH_REFRESH,
+    NEWS_REFRESH } from '../actions/actions'
+
+export function featured (featured = new StoryContainer(), action = {}) {
+  return handleStoryType(FEATURED_REFRESH, featured, action)
+}
 
 export function news (news = new StoryContainer(), action = {}) {
   return handleStoryType(NEWS_REFRESH, news, action)

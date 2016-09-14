@@ -5,6 +5,17 @@ var _index=require('../../src/actions/index');
 var _constants=require('../../src/constants');
 
 describe('actions for stories',function(){
+it('refreshes featured stories',function(){
+var gen=(0,_stories.featured)();
+var type=_constants.namespace.resolve('stories/featured');
+var stories=new _StoryContainer.StoryContainer();
+
+(0,_chai.expect)(gen.next().value).to.deep.equal(_index.actions.starting(type));
+(0,_chai.expect)(gen.next().value).to.deep.equal(_index.fetch.json(type));
+(0,_chai.expect)(gen.next().value).to.deep.equal(_index.timeouts.timeout(1));
+(0,_chai.expect)(gen.next().value).to.deep.equal(_index.actions.finished(type,stories));});
+
+
 it('refreshes news stories',function(){
 var gen=(0,_stories.news)();
 var type=_constants.namespace.resolve('stories/news');
@@ -28,19 +39,25 @@ var stories=new _StoryContainer.StoryContainer();
 
 
 it('refreshes all stories',function(){
-var gen=(0,_stories.news)();
-var type=_constants.namespace.resolve('stories/news');
-var stories=new _StoryContainer.StoryContainer();
+var gen=(0,_stories.stories)();
+var type=_constants.namespace.resolve('stories/featured');
+var container=new _StoryContainer.StoryContainer();
 
 (0,_chai.expect)(gen.next().value).to.deep.equal(_index.actions.starting(type));
 (0,_chai.expect)(gen.next().value).to.deep.equal(_index.fetch.json(type));
 (0,_chai.expect)(gen.next().value).to.deep.equal(_index.timeouts.timeout(1));
-(0,_chai.expect)(gen.next().value).to.deep.equal(_index.actions.finished(type,stories));
+(0,_chai.expect)(gen.next().value).to.deep.equal(_index.actions.finished(type,container));
 
-gen=(0,_stories.launches)();
+type=_constants.namespace.resolve('stories/news');
+
+(0,_chai.expect)(gen.next().value).to.deep.equal(_index.actions.starting(type));
+(0,_chai.expect)(gen.next().value).to.deep.equal(_index.fetch.json(type));
+(0,_chai.expect)(gen.next().value).to.deep.equal(_index.timeouts.timeout(1));
+(0,_chai.expect)(gen.next().value).to.deep.equal(_index.actions.finished(type,container));
+
 type=_constants.namespace.resolve('stories/launches');
 
 (0,_chai.expect)(gen.next().value).to.deep.equal(_index.actions.starting(type));
 (0,_chai.expect)(gen.next().value).to.deep.equal(_index.fetch.json(type));
 (0,_chai.expect)(gen.next().value).to.deep.equal(_index.timeouts.timeout(1));
-(0,_chai.expect)(gen.next().value).to.deep.equal(_index.actions.finished(type,stories));});});
+(0,_chai.expect)(gen.next().value).to.deep.equal(_index.actions.finished(type,container));});});
