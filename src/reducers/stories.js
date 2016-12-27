@@ -24,7 +24,7 @@ function handleStoryType (storyType, stories, action) {
 
   switch (meta.state) {
     case states.error: return stories
-    case states.starting: return new StoryContainer(true, stories.items)
-    case states.finished: return new StoryContainer(false, payload)
+    case states.starting: return new StoryContainer(true, [ ...stories ])
+    case states.finished: return new StoryContainer(false, [ ...payload ])
   }
 }
