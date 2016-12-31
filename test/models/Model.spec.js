@@ -1,3 +1,4 @@
+/* globals describe, it */
 import { expect } from 'chai'
 import { Model, fields } from '../../src/models/Model'
 
@@ -7,7 +8,8 @@ describe('Model helper class', () => {
       get [fields] () {
         return Object.assign(super[fields], {
           foo: 'foo',
-          bar: 'baz'
+          bar: 'baz',
+          defaultTypeVal: Boolean
         })
       }
     }
@@ -16,7 +18,8 @@ describe('Model helper class', () => {
 
     expect(ext).to.deep.equal({
       foo: 'bar',
-      bar: 'baz'
-    } )
+      bar: 'baz',
+      defaultTypeVal: false
+    })
   })
 })
