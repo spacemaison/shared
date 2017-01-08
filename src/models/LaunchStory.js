@@ -1,14 +1,17 @@
-export class LaunchStory {
-  constructor ({
-        description = '',
-        location = '',
-        mission = '',
-        rocket = '',
-        time = new Date() } = {}) {
-    this.description = description
-    this.location = location
-    this.mission = mission
-    this.rocket = rocket
-    this.time = time
+import { Model, fields } from './Model'
+
+export class LaunchStory extends Model {
+  get [fields] () {
+    return Object.assign(super[fields], {
+      id: Number,
+      infoURLs: Array,
+      location: Object,
+      pads: Array,
+      missions: Array,
+      rocket: Object,
+      videoURLs: Array,
+      windowStart: Date,
+      windowEnd: Date
+    })
   }
 }
