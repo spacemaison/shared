@@ -1,1 +1,1 @@
-export { featured, news, launches } from './stories'
+export { featured, media, news, launches } from './stories'

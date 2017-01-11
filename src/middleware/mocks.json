@@ -37,21 +37,43 @@
       "location": "SLC-41, Cape Canaveral Air Force Station, Florida",
       "mission": "NROL-61",
       "rocket": "Atlas 5",
-      "time": "2016-07-28T14:00:00.000Z"
+      "windowStart": "2017-01-11T20:14:17.511Z",
+      "windowEnd": "2017-01-12T20:14:17.511Z",
+      "status": "red"
     },
     {
       "description": "A SpaceX Falcon 9 rocket will launch the 11th Dragon spacecraft on the ninth operational cargo delivery mission to the International Space Station. The flight is being conducted under the Commercial Resupply Services contract with NASA. Delayed from Dec. 9, June 24, June 27 and July 16. [June 23]",
       "location": "SLC-40, Cape Canaveral Air Force Station, Florida",
       "mission": "SpaceX CRS 9",
       "rocket": "Falcon 9",
-      "time": "2016-07-18T18:45:00.000Z"
+      "windowStart": "2017-01-14T20:14:17.511Z",
+      "windowEnd": "2017-01-15T20:14:17.511Z",
+      "status": "green",
+      "videoURLs": [
+        "http://www.spacex.com/webcast/"
+      ]
+    },
+    {
+      "description": "A United Launch Alliance Atlas 5 rocket, designated AV-065, will launch a classified spacecraft payload for the U.S. National Reconnaissance Office. The rocket will fly in the 421 vehicle configuration with a four-meter fairing, two solid rocket boosters and a single-engine Centaur upper stage. Delayed from April 21, June 14 and June 24. Moved forward from July 29. [June 1]",
+      "location": "SLC-41, Cape Canaveral Air Force Station, Florida",
+      "mission": "NROL-61",
+      "rocket": "Atlas 5",
+      "windowStart": "2017-01-21T20:14:17.511Z",
+      "windowEnd": "2017-01-22T20:14:17.511Z",
+      "status": "green",
+      "videoURLs": null
     },
     {
       "description": "A Russian government Soyuz rocket will launch the 64th Progress cargo delivery ship to the International Space Station. Delayed from April 22, July 4 and July 7. [June 7]",
       "location": "Baikonur Cosmodrome, Kazakhstan",
       "mission": "Progress 64P",
       "rocket": "Soyuz",
-      "time": "2016-07-17T11:41:00.000Z"
+      "windowStart": "2017-01-24T20:14:17.511Z",
+      "windowEnd": "2017-01-24T20:14:17.511Z",
+      "status": "green",
+      "videoURLs": [
+        "http://www.roscosmos.ru/317/"
+      ]
     }
   ],
   "news": [
@@ -96,6 +118,38 @@
       "description": "Mystery object in weird orbit beyond Neptune has astronomers puzzled - World - NZ Herald News",
       "thumbnailSource": "https:\/\/b.thumbs.redditmedia.com\/1zQWBeZPjynEgWmRR80-2rBJYKRc1--SUKZOIswfCdo.jpg",
       "thumbnailDescription": "Mystery object in weird orbit beyond Neptune has astronomers puzzled - World - NZ Herald News"
+    }
+  ],
+  "media": [
+    {
+      "title": "Blue",
+      "description": "The color blue",
+      "url": "http://blue.color",
+      "image": {
+        "urls": [
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFAgo/A2VKwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12NgYPsPAAEPAQYIO5t/AAAAAElFTkSuQmCC"
+        ]
+      }
+    },
+    {
+      "title": "A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long title",
+      "description": "The color red",
+      "url": "http://red.color",
+      "image": {
+        "urls": [
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFBML91wvwwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12P4z8AAAAMBAQAY3Y2wAAAAAElFTkSuQmCC"
+        ]
+      }
+    },
+    {
+      "title": "Green",
+      "description": "The very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long description of green",
+      "url": "http://green.color",
+      "image": {
+        "urls": [
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFBkyUrZPQQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12Ng+M8AAAICAQCqKp4nAAAAAElFTkSuQmCC"
+        ]
+      }
     }
   ]
 }
