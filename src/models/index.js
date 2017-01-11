@@ -1,3 +1,4 @@
+export * from './Image'
 import * as Launches from './Launches'
 export * from './NewsItem'
 export * from './NewsStory'
