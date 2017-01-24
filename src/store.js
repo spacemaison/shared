@@ -1,4 +1,5 @@
 import { applyMiddleware, combineReducers } from 'redux'
+import * as storage from 'redux-storage'
 import { createStore as _createStore } from 'redux'
 import generatorMiddleware from 'redux-gen'
 import interceptFetch from './middleware/fetch'
@@ -15,8 +16,9 @@ export function createStore (
       ? debugInterceptFetch
       : interceptFetch
 
+  const reducers = Object.assign({}, addedReducers, sharedReducers)
   return _createStore(
-      combineReducers(Object.assign({}, addedReducers, sharedReducers)),
+      storage.reducer(combineReducers(reducers)),
       applyMiddleware(
           generatorMiddleware(globalErrorHandler, globalSuccessHandler),
           fetchMiddleware,
