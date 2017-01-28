@@ -1,3 +1,4 @@
+import xdate from 'xdate'
 import * as fetch from './fetch'
 import { wrap, aggragate } from './action'
 import { updateReminder } from './reminders'
@@ -12,7 +13,8 @@ import {
     FeaturedStory,
     LaunchStory,
     MediaStory,
-    NewsStory } from '../models/index'
+    NewsStory,
+    Reminder } from '../models/index'
 
 export const featured = wrap(FEATURED_REFRESH, function * (url = FEATURED_URL) {
   const stories = (yield fetch.json(url)).map(s => new FeaturedStory(s))
@@ -23,7 +25,15 @@ export const launches = wrap(LAUNCH_REFRESH, function * (url = LAUNCH_URL) {
   const launches = (yield fetch.json(url)).map(s => new LaunchStory(s))
 
   for (const launch of launches) {
-    yield updateReminder(launch)
+    const { id, missions = [], rocket = {}, windowStart } = launch
+    const missionName = missions[0] && missions[0].name || rocket.name
+    const date = xdate(windowStart).addMinutes(-10).toDate()
+
+    yield * updateReminder(new Reminder({
+      date,
+      id,
+      message: `The ${missionName} launch window starts in ten minutes`
+    }))
   }
 
   return new StoryContainer(false, launches)

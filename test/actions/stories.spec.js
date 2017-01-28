@@ -32,17 +32,23 @@ describe('actions for stories', () => {
   it('refreshes launch stories', () => {
     const gen = launches()
     const storyType = namespace.resolve('stories/launches')
-    const reminderType = namespace.resolve('reminders/update')
-    const story = new LaunchStory()
+    const story = new LaunchStory({ id: 1, missions: [ { name: 'mission' } ] })
     const stories = [ story ]
     const container = new StoryContainer(false, stories)
 
     expect(gen.next().value).to.deep.equal(actions.starting(storyType))
     expect(gen.next().value).to.deep.equal(fetch.json(storyType))
-    expect(gen.next(stories).value)
-      .to.deep.equal(actions.action(reminderType, stories[0]))
-    expect(gen.next().value).to.deep.equal(timeouts.timeout(1))
-    expect(gen.next().value).to.deep.equal(actions.finished(storyType, container))
+
+    const promise = gen.next(stories).value
+    expect(promise).to.deep.be.instanceOf(Promise)
+
+    return promise.then(reminder => {
+      expect(reminder.id).to.equal(1)
+      expect(reminder.message)
+        .to.equal('The mission launch window starts in ten minutes')
+      expect(gen.next().value).to.deep.equal(timeouts.timeout(1))
+      expect(gen.next().value).to.deep.equal(actions.finished(storyType, container))
+    })
   })
 
   it('refreshes all stories', () => {
