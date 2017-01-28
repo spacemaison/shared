@@ -1,5 +1,7 @@
+/* globals describe, it */
 import { expect } from 'chai'
 import { StoryContainer } from '../../src/models/StoryContainer'
+import { LaunchStory } from '../../src/models/LaunchStory'
 import { featured, news, launches, stories } from '../../src/actions/stories'
 import { actions, fetch, timeouts } from '../../src/actions/index'
 import { namespace } from '../../src/constants'
@@ -12,7 +14,7 @@ describe('actions for stories', () => {
 
     expect(gen.next().value).to.deep.equal(actions.starting(type))
     expect(gen.next().value).to.deep.equal(fetch.json(type))
-    expect(gen.next().value).to.deep.equal(timeouts.timeout(1))
+    expect(gen.next([]).value).to.deep.equal(timeouts.timeout(1))
     expect(gen.next().value).to.deep.equal(actions.finished(type, stories))
   })
 
@@ -23,19 +25,24 @@ describe('actions for stories', () => {
 
     expect(gen.next().value).to.deep.equal(actions.starting(type))
     expect(gen.next().value).to.deep.equal(fetch.json(type))
-    expect(gen.next().value).to.deep.equal(timeouts.timeout(1))
+    expect(gen.next([]).value).to.deep.equal(timeouts.timeout(1))
     expect(gen.next().value).to.deep.equal(actions.finished(type, stories))
   })
 
   it('refreshes launch stories', () => {
     const gen = launches()
-    const type = namespace.resolve('stories/launches')
-    const stories = new StoryContainer()
+    const storyType = namespace.resolve('stories/launches')
+    const reminderType = namespace.resolve('reminders/update')
+    const story = new LaunchStory()
+    const stories = [ story ]
+    const container = new StoryContainer(false, stories)
 
-    expect(gen.next().value).to.deep.equal(actions.starting(type))
-    expect(gen.next().value).to.deep.equal(fetch.json(type))
+    expect(gen.next().value).to.deep.equal(actions.starting(storyType))
+    expect(gen.next().value).to.deep.equal(fetch.json(storyType))
+    expect(gen.next(stories).value)
+      .to.deep.equal(actions.action(reminderType, stories[0]))
     expect(gen.next().value).to.deep.equal(timeouts.timeout(1))
-    expect(gen.next().value).to.deep.equal(actions.finished(type, stories))
+    expect(gen.next().value).to.deep.equal(actions.finished(storyType, container))
   })
 
   it('refreshes all stories', () => {
@@ -45,21 +52,21 @@ describe('actions for stories', () => {
 
     expect(gen.next().value).to.deep.equal(actions.starting(type))
     expect(gen.next().value).to.deep.equal(fetch.json(type))
-    expect(gen.next().value).to.deep.equal(timeouts.timeout(1))
+    expect(gen.next([]).value).to.deep.equal(timeouts.timeout(1))
     expect(gen.next().value).to.deep.equal(actions.finished(type, container))
 
     type = namespace.resolve('stories/news')
 
     expect(gen.next().value).to.deep.equal(actions.starting(type))
     expect(gen.next().value).to.deep.equal(fetch.json(type))
-    expect(gen.next().value).to.deep.equal(timeouts.timeout(1))
+    expect(gen.next([]).value).to.deep.equal(timeouts.timeout(1))
     expect(gen.next().value).to.deep.equal(actions.finished(type, container))
 
     type = namespace.resolve('stories/launches')
 
     expect(gen.next().value).to.deep.equal(actions.starting(type))
     expect(gen.next().value).to.deep.equal(fetch.json(type))
-    expect(gen.next().value).to.deep.equal(timeouts.timeout(1))
+    expect(gen.next([]).value).to.deep.equal(timeouts.timeout(1))
     expect(gen.next().value).to.deep.equal(actions.finished(type, container))
   })
 })
