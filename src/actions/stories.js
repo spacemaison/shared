@@ -25,15 +25,7 @@ export const launches = wrap(LAUNCH_REFRESH, function * (url = LAUNCH_URL) {
   const launches = (yield fetch.json(url)).map(s => new LaunchStory(s))
 
   for (const launch of launches) {
-    const { id, missions = [], rocket = {}, windowStart } = launch
-    const missionName = missions[0] && missions[0].name || rocket.name
-    const date = xdate(windowStart).addMinutes(-10).toDate()
-
-    yield * updateReminder(new Reminder({
-      date,
-      id,
-      message: `The ${missionName} launch window starts in ten minutes`
-    }))
+    yield * updateReminder(new Reminder(launch))
   }
 
   return new StoryContainer(false, launches)
