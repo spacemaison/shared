@@ -7,7 +7,13 @@ export default function interceptFetch ({ dispatch, getState }) {
     const { url, params, coerceTo } = payload || {}
 
     return type === FETCH
-      ? fetch(url, params).then(coerceResponse.bind(null, coerceTo))
+      ? fetch(url, params)
+          .then(response => {
+            return coerceResponse(coerceTo, response)
+          })
+          .catch(error => {
+            console.error(error.stack)
+          })
       : next(action)
   }
 }
