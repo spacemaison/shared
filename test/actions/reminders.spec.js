@@ -4,6 +4,7 @@ import { expect } from 'chai'
 import * as reminders from '../../src/actions/reminders'
 import * as actions from '../../src/actions/actions'
 import { Reminder } from '../../src/models/index'
+import { namespace } from '../../src/constants'
 
 describe('actions for reminders', () => {
   it('adds a reminder', () => {
@@ -14,7 +15,7 @@ describe('actions for reminders', () => {
     gen.next()
 
     expect(gen.next(reminder).value).to.deep.equal({
-      type: actions.REMINDER_ADD,
+      type: namespace.resolve('reminders/add'),
       payload: reminder,
       meta: {},
       error: null
@@ -29,7 +30,7 @@ describe('actions for reminders', () => {
     let gen = reminders.addReminder(reminder, notifier)
 
     expect(gen.next().value).to.deep.equal({
-      type: actions.REMINDER_ADD,
+      type: namespace.resolve('reminders/add'),
       payload: null,
       meta: { state: 'error' },
       error
@@ -74,7 +75,7 @@ describe('actions for reminders', () => {
     gen.next()
 
     expect(gen.next(reminder).value).to.deep.equal({
-      type: actions.REMINDER_UPDATE,
+      type: namespace.resolve('reminders/add'),
       payload: reminder,
       meta: {},
       error: null
@@ -89,37 +90,7 @@ describe('actions for reminders', () => {
     let gen = reminders.updateReminder(reminder, notifier)
 
     expect(gen.next().value).to.deep.equal({
-      type: actions.REMINDER_UPDATE,
-      payload: null,
-      meta: { state: 'error' },
-      error
-    })
-  })
-
-  it('toggles a reminder', () => {
-    const reminder = new Reminder({ id: 1 })
-
-    let gen = reminders.toggleReminder(reminder, notifier)
-
-    gen.next()
-
-    expect(gen.next(reminder).value).to.deep.equal({
-      type: actions.REMINDER_TOGGLE,
-      payload: reminder,
-      meta: {},
-      error: null
-    })
-  })
-
-  it('toggles a reminder, but fails after notifier error', () => {
-    const reminder = new Reminder({ id: 1 })
-    const error = new Error()
-    const notifier = { toggle () { throw error } }
-
-    let gen = reminders.toggleReminder(reminder, notifier)
-
-    expect(gen.next().value).to.deep.equal({
-      type: actions.REMINDER_TOGGLE,
+      type: namespace.resolve('reminders/add'),
       payload: null,
       meta: { state: 'error' },
       error

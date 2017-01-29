@@ -33,20 +33,4 @@ describe('reminders reducers', () => {
       .to.deep.equal([ action.payload ]).and
       .have.lengthOf(1)
   })
-
-  it('toggles a reminder', () => {
-    let action = {
-      type: ns.resolve('reminders/toggle'),
-      payload: { id: 1 }
-    }
-
-    expect(reducer([ { id: 1 } ], action)).to.have.lengthOf(0)
-
-    action = {
-      type: ns.resolve('reminders/toggle'),
-      payload: { id: 1 }
-    }
-
-    expect(reducer([], action)).to.deep.equal([ action.payload ])
-  })
 })

@@ -8,9 +8,9 @@ export function * addReminder (
     notifier = interfaces.get('notifier')) {
   try {
     reminder = yield notifier.add(reminder)
-    return action(actions.REMINDER_ADD, reminder)
+    return yield action(actions.REMINDER_ADD, reminder)
   } catch (error) {
-    return action(actions.REMINDER_ADD, error)
+    return yield action(actions.REMINDER_ADD, error)
   }
 }
 
@@ -19,30 +19,14 @@ export function * removeReminder (
     notifier = interfaces.get('notifier')) {
   try {
     reminder = yield notifier.remove(reminder)
-    return action(actions.REMINDER_REMOVE, reminder)
+    return yield action(actions.REMINDER_REMOVE, reminder)
   } catch (error) {
-    return action(actions.REMINDER_REMOVE, error)
-  }
-}
-
-export function * toggleReminder (
-    reminder = new Reminder(),
-    notifier = interfaces.get('notifier')) {
-  try {
-    reminder = yield notifier.toggle(reminder)
-    return action(actions.REMINDER_TOGGLE, reminder)
-  } catch (error) {
-    return action(actions.REMINDER_TOGGLE, error)
+    return yield action(actions.REMINDER_REMOVE, error)
   }
 }
 
 export function * updateReminder (
     reminder = new Reminder(),
     notifier = interfaces.get('notifier')) {
-  try {
-    reminder = yield notifier.update(reminder)
-    return action(actions.REMINDER_UPDATE, reminder)
-  } catch (error) {
-    return action(actions.REMINDER_UPDATE, error)
-  }
+  return yield * addReminder(reminder, notifier)
 }

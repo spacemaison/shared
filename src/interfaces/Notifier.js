@@ -20,15 +20,7 @@ export class Notifier {
     return Promise.resolve(reminder)
   }
 
-  toggle (reminder = new Reminder()) {
-    console.warn('Unimplemented Notifier method "toggle"')
-
-    return Promise.resolve(reminder)
-  }
-
-  update (reminder = new Reminder()) {
-    console.warn('Unimplemented Notifier method "update"')
-
-    return Promise.resolve(reminder)
+  removeAll () {
+    console.warn('Unimplemented Notifier method "removeAll"')
   }
 }

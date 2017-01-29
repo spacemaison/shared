@@ -13,20 +13,16 @@ import {
     FeaturedStory,
     LaunchStory,
     MediaStory,
-    NewsStory,
-    Reminder } from '../models/index'
+    NewsStory } from '../models/index'
 
 export const featured = wrap(FEATURED_REFRESH, function * (url = FEATURED_URL) {
   const stories = (yield fetch.json(url)).map(s => new FeaturedStory(s))
+
   return new StoryContainer(false, stories)
 })
 
 export const launches = wrap(LAUNCH_REFRESH, function * (url = LAUNCH_URL) {
   const launches = (yield fetch.json(url)).map(s => new LaunchStory(s))
-
-  for (const launch of launches) {
-    yield * updateReminder(new Reminder(launch))
-  }
 
   return new StoryContainer(false, launches)
 })
