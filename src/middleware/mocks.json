@@ -33,43 +33,99 @@
   ],
   "launches": [
     {
-      "description": "A United Launch Alliance Atlas 5 rocket, designated AV-065, will launch a classified spacecraft payload for the U.S. National Reconnaissance Office. The rocket will fly in the 421 vehicle configuration with a four-meter fairing, two solid rocket boosters and a single-engine Centaur upper stage. Delayed from April 21, June 14 and June 24. Moved forward from July 29. [June 1]",
+      "id": 1,
       "location": "SLC-41, Cape Canaveral Air Force Station, Florida",
-      "mission": "NROL-61",
-      "rocket": "Atlas 5",
-      "windowStart": "2017-01-11T20:14:17.511Z",
-      "windowEnd": "2017-01-12T20:14:17.511Z",
+      "missions": [
+        {
+          "name": "NROL-61",
+          "description": "A United Launch Alliance Atlas 5 rocket, designated AV-065, will launch a classified spacecraft payload for the U.S. National Reconnaissance Office. The rocket will fly in the 421 vehicle configuration with a four-meter fairing, two solid rocket boosters and a single-engine Centaur upper stage. Delayed from April 21, June 14 and June 24. Moved forward from July 29. [June 1]",
+          "type": "Commercial",
+          "infoURLs": [ "http://foo.com", "http://bar.com" ],
+          "wikiURL": "http://wikipedia.com"
+        }
+      ],
+      "rocket": {
+        "name": "Atlas 5",
+        "imageURL": "https://s3.amazonaws.com/launchlibrary/RocketImages/Atlas+V+401_2560.jpg",
+        "imageSizes": [],
+        "infoURLs": [ "http://foo.com", "http://bar.com" ],
+        "wikiURL": "http://wikipedia.com"
+      },
+      "windowStart": "Added in fetch-debug",
+      "windowEnd": "Added in fetch-debug",
       "status": "red"
     },
     {
-      "description": "A SpaceX Falcon 9 rocket will launch the 11th Dragon spacecraft on the ninth operational cargo delivery mission to the International Space Station. The flight is being conducted under the Commercial Resupply Services contract with NASA. Delayed from Dec. 9, June 24, June 27 and July 16. [June 23]",
+      "id": 2,
       "location": "SLC-40, Cape Canaveral Air Force Station, Florida",
-      "mission": "SpaceX CRS 9",
-      "rocket": "Falcon 9",
-      "windowStart": "2017-01-14T20:14:17.511Z",
-      "windowEnd": "2017-01-15T20:14:17.511Z",
+      "missions": [
+        {
+          "name": "SpaceX CRS 9",
+          "description": "A SpaceX Falcon 9 rocket will launch the 11th Dragon spacecraft on the ninth operational cargo delivery mission to the International Space Station. The flight is being conducted under the Commercial Resupply Services contract with NASA. Delayed from Dec. 9, June 24, June 27 and July 16. [June 23]",
+          "type": "Commercial",
+          "infoURLs": [ "http://foo.com", "http://bar.com" ],
+          "wikiURL": "http://wikipedia.com"
+        }
+      ],
+      "rocket": {
+        "name": "Falcon 9",
+        "imageURL": "https://s3.amazonaws.com/launchlibrary/RocketImages/Falcon+9+Full+Thrust_1920.jpg",
+        "imageSizes": [],
+        "infoURLs": [ "http://foo.com", "http://bar.com" ],
+        "wikiURL": "http://wikipedia.com"
+      },
+      "windowStart": "Added in fetch-debug",
+      "windowEnd": "Added in fetch-debug",
       "status": "green",
       "videoURLs": [
         "http://www.spacex.com/webcast/"
       ]
     },
     {
-      "description": "A United Launch Alliance Atlas 5 rocket, designated AV-065, will launch a classified spacecraft payload for the U.S. National Reconnaissance Office. The rocket will fly in the 421 vehicle configuration with a four-meter fairing, two solid rocket boosters and a single-engine Centaur upper stage. Delayed from April 21, June 14 and June 24. Moved forward from July 29. [June 1]",
+      "id": 3,
       "location": "SLC-41, Cape Canaveral Air Force Station, Florida",
-      "mission": "NROL-61",
-      "rocket": "Atlas 5",
-      "windowStart": "2017-01-21T20:14:17.511Z",
-      "windowEnd": "2017-01-22T20:14:17.511Z",
+      "missions": [
+        {
+          "name": "NROL-61",
+          "description": "A United Launch Alliance Atlas 5 rocket, designated AV-065, will launch a classified spacecraft payload for the U.S. National Reconnaissance Office. The rocket will fly in the 421 vehicle configuration with a four-meter fairing, two solid rocket boosters and a single-engine Centaur upper stage. Delayed from April 21, June 14 and June 24. Moved forward from July 29. [June 1]",
+          "type": "Commercial",
+          "infoURLs": [ "http://foo.com", "http://bar.com" ],
+          "wikiURL": "http://wikipedia.com"
+        }
+      ],
+      "rocket": {
+        "name": "Atlas 5",
+        "imageURL": "https://s3.amazonaws.com/launchlibrary/RocketImages/Atlas+V+401_2560.jpg",
+        "imageSizes": [],
+        "infoURLs": [ "http://foo.com", "http://bar.com" ],
+        "wikiURL": "http://wikipedia.com"
+      },
+      "windowStart": "Added in fetch-debug",
+      "windowEnd": "Added in fetch-debug",
       "status": "green",
       "videoURLs": null
     },
     {
-      "description": "A Russian government Soyuz rocket will launch the 64th Progress cargo delivery ship to the International Space Station. Delayed from April 22, July 4 and July 7. [June 7]",
+      "id": 4,
+      "missions": [
+        {
+          "name": "Progress 64P",
+          "description": "A Russian government Soyuz rocket will launch the 64th Progress cargo delivery ship to the International Space Station. Delayed from April 22, July 4 and July 7. [June 7]",
+          "type": "Commercial",
+          "infoURLs": [ "http://foo.com", "http://bar.com" ],
+          "wikiURL": "http://wikipedia.com"
+        }
+      ],
+      "rocket": {
+        "name": "Soyuz",
+        "imageURL": "https://s3.amazonaws.com/launchlibrary/RocketImages/Soyuz+2.1a_1440.jpg",
+        "imageSizes": [],
+        "infoURLs": [ "http://foo.com", "http://bar.com" ],
+        "wikiURL": "http://wikipedia.com"
+      },
       "location": "Baikonur Cosmodrome, Kazakhstan",
-      "mission": "Progress 64P",
-      "rocket": "Soyuz",
-      "windowStart": "2017-01-24T20:14:17.511Z",
-      "windowEnd": "2017-01-24T20:14:17.511Z",
+      "windowStart": "Added in fetch-debug",
+      "windowEnd": "Added in fetch-debug",
       "status": "green",
       "videoURLs": [
         "http://www.roscosmos.ru/317/"
@@ -120,7 +176,31 @@
       "thumbnailDescription": "Mystery object in weird orbit beyond Neptune has astronomers puzzled - World - NZ Herald News"
     }
   ],
+  "galleries": {
+    "new_horizons": [
+      {
+        "image": {
+          "urls": [
+            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFAgo/A2VKwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12NgYPsPAAEPAQYIO5t/AAAAAElFTkSuQmCC"
+          ]
+        },
+        "title": "",
+        "description": "",
+        "credit": []
+      }
+    ]
+  },
   "media": [
+    {
+      "title": "New Horizons Images",
+      "description": "lkjlkjlkjlkjlkj",
+      "url": "page://gallery?images=new_horizons",
+      "image": {
+        "urls": [
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFAgo/A2VKwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12NgYPsPAAEPAQYIO5t/AAAAAElFTkSuQmCC"
+        ]
+      }
+    },
     {
       "title": "Blue",
       "description": "The color blue",
