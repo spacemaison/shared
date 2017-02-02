@@ -1,35 +1,11 @@
-import { StoryContainer } from '../models/StoryContainer'
-import { states } from '../actions/action'
+import * as rest from './rest'
 import {
-    FEATURED_REFRESH,
-    LAUNCH_REFRESH,
-    MEDIA_REFRESH,
-    NEWS_REFRESH } from '../actions/actions'
+    FEATURED_URL,
+    LAUNCH_URL,
+    MEDIA_URL,
+    NEWS_URL } from '../constants'
 
-export function featured (featured = new StoryContainer(), action = {}) {
-  return handleStoryType(FEATURED_REFRESH, featured, action)
-}
-
-export function news (news = new StoryContainer(), action = {}) {
-  return handleStoryType(NEWS_REFRESH, news, action)
-}
-
-export function launches (launches = new StoryContainer(), action = {}) {
-  return handleStoryType(LAUNCH_REFRESH, launches, action)
-}
-
-export function media (media = new StoryContainer(), action = {}) {
-  return handleStoryType(MEDIA_REFRESH, media, action)
-}
-
-function handleStoryType (storyType, stories, action) {
-  const { type, payload, meta } = action
-
-  if (type !== storyType) return stories
-
-  switch (meta.state) {
-    case states.error: return stories
-    case states.starting: return new StoryContainer(true, [ ...stories ])
-    case states.finished: return new StoryContainer(false, [ ...payload ])
-  }
-}
+export const featured = rest.handleJSONArray(FEATURED_URL)
+export const news = rest.handleJSONArray(NEWS_URL)
+export const launches = rest.handleJSONArray(LAUNCH_URL)
+export const media = rest.handleJSONArray(MEDIA_URL)

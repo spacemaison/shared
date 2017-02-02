@@ -176,25 +176,52 @@
       "thumbnailDescription": "Mystery object in weird orbit beyond Neptune has astronomers puzzled - World - NZ Herald News"
     }
   ],
-  "galleries": {
-    "new_horizons": [
-      {
-        "image": {
-          "urls": [
-            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFAgo/A2VKwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12NgYPsPAAEPAQYIO5t/AAAAAElFTkSuQmCC"
-          ]
+  "galleries": [
+    {
+      "id": 0,
+      "title": "Mock Gallery",
+      "items": [
+        {
+          "image": {
+            "urls": [
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFAgo/A2VKwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12NgYPsPAAEPAQYIO5t/AAAAAElFTkSuQmCC"
+            ]
+          },
+          "title": "Big blue",
+          "description": "The color blue",
+          "credit": [ "God", "|", "Whatever" ],
+          "license": "Public domain"
         },
-        "title": "",
-        "description": "",
-        "credit": []
-      }
-    ]
-  },
+        {
+          "image": {
+            "urls": [
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFBML91wvwwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12P4z8AAAAMBAQAY3Y2wAAAAAElFTkSuQmCC"
+            ]
+          },
+          "title": "A very very very very very very very very very very very very very very long title",
+          "description": "The color red",
+          "credit": [ "God", "|", "Whatever", "A very very very very very very very very very very very very long author" ],
+          "license": "A very very very very very very very very very very very very very very long copywrite message"
+        },
+        {
+          "image": {
+            "urls": [
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFBkyUrZPQQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12Ng+M8AAAICAQCqKp4nAAAAAElFTkSuQmCC"
+            ]
+          },
+          "title": "Green",
+          "description": "A very very very very very very very very very very very very very very very long description",
+          "credit": [ "God", "|", "Whatever" ],
+          "license": "Public domain"
+        }
+      ]
+    }
+  ],
   "media": [
     {
-      "title": "New Horizons Images",
-      "description": "lkjlkjlkjlkjlkj",
-      "url": "page://gallery?images=new_horizons",
+      "title": "Mock Gallery",
+      "description": "A mock gallery to test that page",
+      "url": "page://gallery?id=0",
       "image": {
         "urls": [
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFAgo/A2VKwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12NgYPsPAAEPAQYIO5t/AAAAAElFTkSuQmCC"
