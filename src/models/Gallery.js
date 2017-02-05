@@ -10,7 +10,9 @@ export class Gallery extends Model {
   get [fields] () {
     return Object.assign(super[fields], {
       id: Number,
+      date: Date,
       title: String,
+      description: String,
       items: Array
     })
   }

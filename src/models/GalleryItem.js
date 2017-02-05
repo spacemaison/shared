@@ -9,12 +9,14 @@ export class GalleryItem extends Model {
 
   get [fields] () {
     return Object.assign(super[fields], {
+      id: String,
       image: Image,
       credit: Array,
       license: String,
       title: String,
       description: String,
-      date: Date
+      date: Date,
+      infoURL: String
     })
   }
 }
