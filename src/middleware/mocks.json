@@ -136,44 +136,81 @@
     {
       "url": "https:\/\/www.reddit.com\/r\/spacex\/comments\/4y3bg0\/bfrmct_a_more_realistic_analysis_v12_now_with\/",
       "description": "BFR\/MCT: A More Realistic Analysis, v1.2 (now with composites!)",
-      "thumbnailSource": "",
-      "thumbnailDescription": ""
+      "image": {
+        "urls": []
+      }
     },
     {
       "url": "http:\/\/arstechnica.com\/science\/2016\/08\/spacex-reportedly-signs-multibillion-deal-for-carbon-fiber-composites\/",
       "description": "He must be serious about Mars: Elon Musk invests $2 billion in carbon fibers",
-      "thumbnailSource": "https:\/\/b.thumbs.redditmedia.com\/iLvTbkf5UqsjUTMFrmLOo_w_o25eaC6SVWNi1oTmFJA.jpg",
-      "thumbnailDescription": "He must be serious about Mars: Elon Musk invests $2 billion in carbon fibers"
+      "image": {
+        "urls": [
+          "https:\/\/b.thumbs.redditmedia.com\/iLvTbkf5UqsjUTMFrmLOo_w_o25eaC6SVWNi1oTmFJA.jpg"
+        ],
+        "descriptions": [
+          "He must be serious about Mars: Elon Musk invests $2 billion in carbon fibers"
+        ]
+      }
     },
     {
       "url": "http:\/\/www.nasa.gov\/press-release\/nasa-television-airs-journey-to-mars-showcase-rocket-engine-test",
       "description": "NASA Television Airs Journey to Mars Showcase, Rocket Engine Test - Thursday, Aug. 18",
-      "thumbnailSource": "https:\/\/a.thumbs.redditmedia.com\/ziPqRzYm6oVKFf3jgGPTFe6d1K1dZgT029vpEzQOXG0.jpg",
-      "thumbnailDescription": "NASA Television Airs Journey to Mars Showcase, Rocket Engine Test - Thursday, Aug. 18"
+      "image": {
+        "urls": [
+          "https:\/\/a.thumbs.redditmedia.com\/ziPqRzYm6oVKFf3jgGPTFe6d1K1dZgT029vpEzQOXG0.jpg"
+        ],
+        "descriptions": [
+          "NASA Television Airs Journey to Mars Showcase, Rocket Engine Test - Thursday, Aug. 18"
+        ]
+      }
     },
     {
       "url": "http:\/\/www.theverge.com\/2016\/8\/16\/12490008\/nasa-iss-new-international-docking-adapter-watch-live",
       "description": "NASA astronauts will install a new dock to the International Space Station this Friday",
-      "thumbnailSource": "https:\/\/b.thumbs.redditmedia.com\/PdqXZTxvKSe3YdJvNsqprDIuZWGtHd4ftFI4-F2obyY.jpg",
-      "thumbnailDescription": "NASA astronauts will install a new dock to the International Space Station this Friday"
+      "image": {
+        "urls": [
+          "https:\/\/b.thumbs.redditmedia.com\/PdqXZTxvKSe3YdJvNsqprDIuZWGtHd4ftFI4-F2obyY.jpg"
+        ],
+        "descriptions": [
+          "NASA astronauts will install a new dock to the International Space Station this Friday"
+        ]
+      }
     },
     {
       "url": "https:\/\/twitter.com\/arianespaceceo\/status\/765612192859320322",
       "description": "Ariane 5 is looking good! The #VA232 team is putting their \u201csignature\u201d touch on the heavy-lift launcher [More info in comments](x-post \/r\/Arianespace)",
-      "thumbnailSource": "https:\/\/b.thumbs.redditmedia.com\/BGV4H4DSZHaIYkb7TjiLWLFLVeav7wsRv_Sie1ZwMIY.jpg",
-      "thumbnailDescription": "Ariane 5 is looking good! The #VA232 team is putting their \u201csignature\u201d touch on the heavy-lift launcher [More info in comments](x-post \/r\/Arianespace)"
+      "image": {
+        "urls": [
+          "https:\/\/b.thumbs.redditmedia.com\/BGV4H4DSZHaIYkb7TjiLWLFLVeav7wsRv_Sie1ZwMIY.jpg"
+        ],
+        "descriptions": [
+          "Ariane 5 is looking good! The #VA232 team is putting their \u201csignature\u201d touch on the heavy-lift launcher [More info in comments](x-post \/r\/Arianespace)"
+        ]
+      }
     },
     {
       "url": "http:\/\/phys.org\/news\/2016-08-earth-like-planet-proxima-centauri.html",
       "description": "Earth-Like Planet Discovered around Proxima Centauri",
-      "thumbnailSource": "https:\/\/b.thumbs.redditmedia.com\/wBVHaFiNf_COmpx-5dqjnoO7cHt-bxg_HWhfqvO0bHU.jpg",
-      "thumbnailDescription": "Earth-Like Planet Discovered around Proxima Centauri"
+      "image": {
+        "urls": [
+          "https:\/\/b.thumbs.redditmedia.com\/wBVHaFiNf_COmpx-5dqjnoO7cHt-bxg_HWhfqvO0bHU.jpg"
+        ],
+        "descriptions": [
+          "Earth-Like Planet Discovered around Proxima Centauri"
+        ]
+      }
     },
     {
       "url": "http:\/\/www.nzherald.co.nz\/world\/news\/article.cfm?c_id=2&objectid=11693703",
       "description": "Mystery object in weird orbit beyond Neptune has astronomers puzzled - World - NZ Herald News",
-      "thumbnailSource": "https:\/\/b.thumbs.redditmedia.com\/1zQWBeZPjynEgWmRR80-2rBJYKRc1--SUKZOIswfCdo.jpg",
-      "thumbnailDescription": "Mystery object in weird orbit beyond Neptune has astronomers puzzled - World - NZ Herald News"
+      "image": {
+        "urls": [
+          "https:\/\/b.thumbs.redditmedia.com\/1zQWBeZPjynEgWmRR80-2rBJYKRc1--SUKZOIswfCdo.jpg"
+        ],
+        "descriptions": [
+          "Mystery object in weird orbit beyond Neptune has astronomers puzzled - World - NZ Herald News"
+        ]
+      }
     }
   ],
   "galleries": [
