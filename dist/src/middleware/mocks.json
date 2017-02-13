@@ -1,0 +1,299 @@
+{
+  "featured": [
+    {
+      "title": "Blue",
+      "description": "The color blue",
+      "url": "http://blue.color",
+      "image": {
+        "urls": [
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFAgo/A2VKwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12NgYPsPAAEPAQYIO5t/AAAAAElFTkSuQmCC"
+        ]
+      }
+    },
+    {
+      "title": "A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long title",
+      "description": "The color red",
+      "url": "http://red.color",
+      "image": {
+        "urls": [
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFBML91wvwwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12P4z8AAAAMBAQAY3Y2wAAAAAElFTkSuQmCC"
+        ]
+      }
+    },
+    {
+      "title": "Green",
+      "description": "The very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long description of green",
+      "url": "http://green.color",
+      "image": {
+        "urls": [
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFBkyUrZPQQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12Ng+M8AAAICAQCqKp4nAAAAAElFTkSuQmCC"
+        ]
+      }
+    }
+  ],
+  "launches": [
+    {
+      "id": 1,
+      "location": "SLC-41, Cape Canaveral Air Force Station, Florida",
+      "missions": [
+        {
+          "name": "NROL-61",
+          "description": "A United Launch Alliance Atlas 5 rocket, designated AV-065, will launch a classified spacecraft payload for the U.S. National Reconnaissance Office. The rocket will fly in the 421 vehicle configuration with a four-meter fairing, two solid rocket boosters and a single-engine Centaur upper stage. Delayed from April 21, June 14 and June 24. Moved forward from July 29. [June 1]",
+          "type": "Commercial",
+          "infoURLs": [ "http://foo.com", "http://bar.com" ],
+          "wikiURL": "http://wikipedia.com"
+        }
+      ],
+      "rocket": {
+        "name": "Atlas 5",
+        "imageURL": "https://s3.amazonaws.com/launchlibrary/RocketImages/Atlas+V+401_2560.jpg",
+        "imageSizes": [],
+        "infoURLs": [ "http://foo.com", "http://bar.com" ],
+        "wikiURL": "http://wikipedia.com"
+      },
+      "windowStart": "Added in fetch-debug",
+      "windowEnd": "Added in fetch-debug",
+      "status": "red"
+    },
+    {
+      "id": 2,
+      "location": "SLC-40, Cape Canaveral Air Force Station, Florida",
+      "missions": [
+        {
+          "name": "SpaceX CRS 9",
+          "description": "A SpaceX Falcon 9 rocket will launch the 11th Dragon spacecraft on the ninth operational cargo delivery mission to the International Space Station. The flight is being conducted under the Commercial Resupply Services contract with NASA. Delayed from Dec. 9, June 24, June 27 and July 16. [June 23]",
+          "type": "Commercial",
+          "infoURLs": [ "http://foo.com", "http://bar.com" ],
+          "wikiURL": "http://wikipedia.com"
+        }
+      ],
+      "rocket": {
+        "name": "Falcon 9",
+        "imageURL": "https://s3.amazonaws.com/launchlibrary/RocketImages/Falcon+9+Full+Thrust_1920.jpg",
+        "imageSizes": [],
+        "infoURLs": [ "http://foo.com", "http://bar.com" ],
+        "wikiURL": "http://wikipedia.com"
+      },
+      "windowStart": "Added in fetch-debug",
+      "windowEnd": "Added in fetch-debug",
+      "status": "green",
+      "videoURLs": [
+        "http://www.spacex.com/webcast/"
+      ]
+    },
+    {
+      "id": 3,
+      "location": "SLC-41, Cape Canaveral Air Force Station, Florida",
+      "missions": [
+        {
+          "name": "NROL-61",
+          "description": "A United Launch Alliance Atlas 5 rocket, designated AV-065, will launch a classified spacecraft payload for the U.S. National Reconnaissance Office. The rocket will fly in the 421 vehicle configuration with a four-meter fairing, two solid rocket boosters and a single-engine Centaur upper stage. Delayed from April 21, June 14 and June 24. Moved forward from July 29. [June 1]",
+          "type": "Commercial",
+          "infoURLs": [ "http://foo.com", "http://bar.com" ],
+          "wikiURL": "http://wikipedia.com"
+        }
+      ],
+      "rocket": {
+        "name": "Atlas 5",
+        "imageURL": "https://s3.amazonaws.com/launchlibrary/RocketImages/Atlas+V+401_2560.jpg",
+        "imageSizes": [],
+        "infoURLs": [ "http://foo.com", "http://bar.com" ],
+        "wikiURL": "http://wikipedia.com"
+      },
+      "windowStart": "Added in fetch-debug",
+      "windowEnd": "Added in fetch-debug",
+      "status": "green",
+      "videoURLs": null
+    },
+    {
+      "id": 4,
+      "missions": [
+        {
+          "name": "Progress 64P",
+          "description": "A Russian government Soyuz rocket will launch the 64th Progress cargo delivery ship to the International Space Station. Delayed from April 22, July 4 and July 7. [June 7]",
+          "type": "Commercial",
+          "infoURLs": [ "http://foo.com", "http://bar.com" ],
+          "wikiURL": "http://wikipedia.com"
+        }
+      ],
+      "rocket": {
+        "name": "Soyuz",
+        "imageURL": "https://s3.amazonaws.com/launchlibrary/RocketImages/Soyuz+2.1a_1440.jpg",
+        "imageSizes": [],
+        "infoURLs": [ "http://foo.com", "http://bar.com" ],
+        "wikiURL": "http://wikipedia.com"
+      },
+      "location": "Baikonur Cosmodrome, Kazakhstan",
+      "windowStart": "Added in fetch-debug",
+      "windowEnd": "Added in fetch-debug",
+      "status": "green",
+      "videoURLs": [
+        "http://www.roscosmos.ru/317/"
+      ]
+    }
+  ],
+  "news": [
+    {
+      "url": "https:\/\/www.reddit.com\/r\/spacex\/comments\/4y3bg0\/bfrmct_a_more_realistic_analysis_v12_now_with\/",
+      "description": "BFR\/MCT: A More Realistic Analysis, v1.2 (now with composites!)",
+      "image": {
+        "urls": []
+      }
+    },
+    {
+      "url": "http:\/\/arstechnica.com\/science\/2016\/08\/spacex-reportedly-signs-multibillion-deal-for-carbon-fiber-composites\/",
+      "description": "He must be serious about Mars: Elon Musk invests $2 billion in carbon fibers",
+      "image": {
+        "urls": [
+          "https:\/\/b.thumbs.redditmedia.com\/iLvTbkf5UqsjUTMFrmLOo_w_o25eaC6SVWNi1oTmFJA.jpg"
+        ],
+        "descriptions": [
+          "He must be serious about Mars: Elon Musk invests $2 billion in carbon fibers"
+        ]
+      }
+    },
+    {
+      "url": "http:\/\/www.nasa.gov\/press-release\/nasa-television-airs-journey-to-mars-showcase-rocket-engine-test",
+      "description": "NASA Television Airs Journey to Mars Showcase, Rocket Engine Test - Thursday, Aug. 18",
+      "image": {
+        "urls": [
+          "https:\/\/a.thumbs.redditmedia.com\/ziPqRzYm6oVKFf3jgGPTFe6d1K1dZgT029vpEzQOXG0.jpg"
+        ],
+        "descriptions": [
+          "NASA Television Airs Journey to Mars Showcase, Rocket Engine Test - Thursday, Aug. 18"
+        ]
+      }
+    },
+    {
+      "url": "http:\/\/www.theverge.com\/2016\/8\/16\/12490008\/nasa-iss-new-international-docking-adapter-watch-live",
+      "description": "NASA astronauts will install a new dock to the International Space Station this Friday",
+      "image": {
+        "urls": [
+          "https:\/\/b.thumbs.redditmedia.com\/PdqXZTxvKSe3YdJvNsqprDIuZWGtHd4ftFI4-F2obyY.jpg"
+        ],
+        "descriptions": [
+          "NASA astronauts will install a new dock to the International Space Station this Friday"
+        ]
+      }
+    },
+    {
+      "url": "https:\/\/twitter.com\/arianespaceceo\/status\/765612192859320322",
+      "description": "Ariane 5 is looking good! The #VA232 team is putting their \u201csignature\u201d touch on the heavy-lift launcher [More info in comments](x-post \/r\/Arianespace)",
+      "image": {
+        "urls": [
+          "https:\/\/b.thumbs.redditmedia.com\/BGV4H4DSZHaIYkb7TjiLWLFLVeav7wsRv_Sie1ZwMIY.jpg"
+        ],
+        "descriptions": [
+          "Ariane 5 is looking good! The #VA232 team is putting their \u201csignature\u201d touch on the heavy-lift launcher [More info in comments](x-post \/r\/Arianespace)"
+        ]
+      }
+    },
+    {
+      "url": "http:\/\/phys.org\/news\/2016-08-earth-like-planet-proxima-centauri.html",
+      "description": "Earth-Like Planet Discovered around Proxima Centauri",
+      "image": {
+        "urls": [
+          "https:\/\/b.thumbs.redditmedia.com\/wBVHaFiNf_COmpx-5dqjnoO7cHt-bxg_HWhfqvO0bHU.jpg"
+        ],
+        "descriptions": [
+          "Earth-Like Planet Discovered around Proxima Centauri"
+        ]
+      }
+    },
+    {
+      "url": "http:\/\/www.nzherald.co.nz\/world\/news\/article.cfm?c_id=2&objectid=11693703",
+      "description": "Mystery object in weird orbit beyond Neptune has astronomers puzzled - World - NZ Herald News",
+      "image": {
+        "urls": [
+          "https:\/\/b.thumbs.redditmedia.com\/1zQWBeZPjynEgWmRR80-2rBJYKRc1--SUKZOIswfCdo.jpg"
+        ],
+        "descriptions": [
+          "Mystery object in weird orbit beyond Neptune has astronomers puzzled - World - NZ Herald News"
+        ]
+      }
+    }
+  ],
+  "galleries": [
+    {
+      "id": 0,
+      "title": "Mock Gallery",
+      "items": [
+        {
+          "image": {
+            "urls": [
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFAgo/A2VKwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12NgYPsPAAEPAQYIO5t/AAAAAElFTkSuQmCC"
+            ]
+          },
+          "title": "Big blue",
+          "description": "The color blue",
+          "credit": [ "God", "|", "Whatever" ],
+          "license": "Public domain"
+        },
+        {
+          "image": {
+            "urls": [
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFBML91wvwwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12P4z8AAAAMBAQAY3Y2wAAAAAElFTkSuQmCC"
+            ]
+          },
+          "title": "A very very very very very very very very very very very very very very long title",
+          "description": "The color red",
+          "credit": [ "God", "|", "Whatever", "A very very very very very very very very very very very very long author" ],
+          "license": "A very very very very very very very very very very very very very very long copywrite message"
+        },
+        {
+          "image": {
+            "urls": [
+              "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFBkyUrZPQQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12Ng+M8AAAICAQCqKp4nAAAAAElFTkSuQmCC"
+            ]
+          },
+          "title": "Green",
+          "description": "A very very very very very very very very very very very very very very very long description",
+          "credit": [ "God", "|", "Whatever" ],
+          "license": "Public domain"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "title": "Mock Gallery",
+      "description": "A mock gallery to test that page",
+      "url": "page://gallery?id=0",
+      "image": {
+        "urls": [
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFAgo/A2VKwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12NgYPsPAAEPAQYIO5t/AAAAAElFTkSuQmCC"
+        ]
+      }
+    },
+    {
+      "title": "Blue",
+      "description": "The color blue",
+      "url": "http://blue.color",
+      "image": {
+        "urls": [
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFAgo/A2VKwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12NgYPsPAAEPAQYIO5t/AAAAAElFTkSuQmCC"
+        ]
+      }
+    },
+    {
+      "title": "A very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long title",
+      "description": "The color red",
+      "url": "http://red.color",
+      "image": {
+        "urls": [
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFBML91wvwwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12P4z8AAAAMBAQAY3Y2wAAAAAElFTkSuQmCC"
+        ]
+      }
+    },
+    {
+      "title": "Green",
+      "description": "The very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long description of green",
+      "url": "http://green.color",
+      "image": {
+        "urls": [
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkXFBkyUrZPQQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQI12Ng+M8AAAICAQCqKp4nAAAAAElFTkSuQmCC"
+        ]
+      }
+    }
+  ]
+}
