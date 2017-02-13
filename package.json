@@ -1,5 +1,6 @@
 {
   "name": "space-maison-shared",
+  "private": true,
   "version": "0.0.1",
   "description": "Aggregated space information",
   "browser": "src/index.js",
