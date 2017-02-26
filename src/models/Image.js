@@ -22,7 +22,9 @@ export class Image extends Model {
   }
 
   getReactNativeSource () {
-    return this.urls.map((uri, index) => {
+    const urls = Array.isArray(this.urls) ? this.urls : []
+
+    return urls.map((uri, index) => {
       const size = this.sizes[index]
       const description = this.descriptions[index] || ''
 
