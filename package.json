@@ -1,7 +1,7 @@
 {
   "name": "space-maison-shared",
   "private": true,
-  "version": "3.0.0",
+  "version": "5.0.0",
   "description": "Aggregated space information",
   "main": "dist/src/index.js",
   "scripts": {
